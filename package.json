@@ -1,0 +1,22 @@
+{
+  "name": "smile-ui",
+  "version": "1.0.0",
+  "description": "A react ui library for web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktb1207/smile-ui.git"
+  },
+  "keywords": [
+    "react-ui"
+  ],
+  "author": "ktb1207",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ktb1207/smile-ui/issues"
+  },
+  "homepage": "https://github.com/ktb1207/smile-ui#readme"
+}
