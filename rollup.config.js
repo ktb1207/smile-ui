@@ -5,8 +5,6 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 // ts
 import typescript from '@rollup/plugin-typescript';
-// ts类型文件
-import dts from 'rollup-plugin-dts';
 // babel
 import { babel } from '@rollup/plugin-babel';
 // 配置

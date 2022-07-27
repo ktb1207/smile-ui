@@ -6,7 +6,7 @@
   "module": "dist/index.mjs",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -34,7 +34,6 @@
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "rollup": "^2.75.7",
-    "rollup-plugin-dts": "^4.2.2",
     "typescript-plugin-css-modules": "^3.4.0"
   },
   "dependencies": {
