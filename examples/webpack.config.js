@@ -6,7 +6,7 @@ const handleUrl = (str) => {
 };
 
 module.exports = {
-  entry: handleUrl('src/index.js'),
+  entry: handleUrl('src/index.tsx'),
   mode: 'development',
   devtool: 'source-map',
   output: {
@@ -16,6 +16,20 @@ module.exports = {
     filename: '[name].[contenthash].js',
     // clean dist
     clean: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(m?js|jsx)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader'
+      },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: ['ts-loader']
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -36,7 +50,7 @@ module.exports = {
     // 启用热更新
     hot: true,
     open: ['index.html#home'],
-    port: 9000,
+    port: 3030,
     // 代理
     proxy: {},
   },
