@@ -1,6 +1,7 @@
 const path = require('path');
 // html创建
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const handleUrl = (str) => {
   return path.resolve(__dirname, `./${str}`);
 };
@@ -11,11 +12,16 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: handleUrl('dist'),
-    pathinfo: false,
     // contenthash利于静态文件缓存
     filename: '[name].[contenthash].js',
-    // clean dist
-    clean: true,
+  },
+  resolve: {
+    alias: {
+      '@': handleUrl('src'),
+      '@ui': handleUrl('../src')
+    },
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
+    modules: ['node_modules']
   },
   module: {
     rules: [
@@ -32,6 +38,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: 'smile-ui examples',
       template: handleUrl('public/index.html'),
