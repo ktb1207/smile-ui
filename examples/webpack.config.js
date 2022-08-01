@@ -1,7 +1,7 @@
 const path = require('path');
 // html创建
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const handleUrl = (str) => {
   return path.resolve(__dirname, `./${str}`);
 };
@@ -38,7 +38,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'smile-ui examples',
       template: handleUrl('public/index.html'),
@@ -54,6 +54,7 @@ module.exports = {
       overlay: true,
     },
     compress: false,
+    historyApiFallback: true,
     // 启用热更新
     hot: true,
     open: ['index.html#home'],
