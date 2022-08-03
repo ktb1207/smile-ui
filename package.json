@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "A react ui library for web",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/types/index.d.ts",
+  "module": "es/index.mjs",
+  "types": "es/types/index.d.ts",
   "scripts": {
     "build": "rollup -c --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/nodeCommon.js"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,10 @@
     "@rollup/plugin-typescript": "^8.3.3",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
+    "autoprefixer": "^10.4.8",
+    "node-sass": "^7.0.1",
     "rollup": "^2.75.7",
+    "rollup-plugin-postcss": "^4.0.2",
     "typescript-plugin-css-modules": "^3.4.0"
   },
   "dependencies": {

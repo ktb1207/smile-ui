@@ -1,0 +1,41 @@
+:root[theme="normal"] {
+  /* background */
+  --default-bg-color: #fff;
+
+  --parimy-bg-color: #409eff;
+  --success-bg-color: #67c23a;
+  --info-bg-color: #909399;
+  --warning-bg-color: #e6a23c;
+  --danger-bg-color: #f56c6c;
+  /* text */
+  --normal-text-color: #606266;
+  --white-text-color: #fff;
+  /* border */
+  --normal-border-color: #dcdfe6;
+
+  --parimy-border-color: #409eff;
+  --success-border-color: #67c23a;
+  --info-bg-border: #909399;
+  --warning-border-color: #e6a23c;
+  --danger-border-color: #f56c6c;
+
+}
+:root[theme="dark"] {
+  /* background */
+  --default-bg-color: #fff;
+  --parimy-bg-color: #409eff;
+  --success-bg-color: #67c23a;
+  --info-bg-color: #909399;
+  --warning-bg-color: #e6a23c;
+  --danger-bg-color: #f56c6c;
+  /* text */
+  --normal-text-color: #606266;
+  --white-text-color: #fff;
+  /* border */
+  --normal-border-color: #dcdfe6;
+  --parimy-border-color: #409eff;
+  --success-border-color: #67c23a;
+  --info-bg-border: #909399;
+  --warning-border-color: #e6a23c;
+  --danger-border-color: #f56c6c;
+}

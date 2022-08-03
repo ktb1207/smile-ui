@@ -7,13 +7,16 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 // babel
 import { babel } from '@rollup/plugin-babel';
+// postcss
+import postcss from 'rollup-plugin-postcss';
+import autoprefixer from 'autoprefixer';
 // 配置
 export default [
   {
     input: 'src/index.ts',
     output: [
       {
-        file: 'dist/index.mjs',
+        file: 'es/index.mjs',
         format: 'es',
       },
       {
@@ -21,7 +24,7 @@ export default [
         format: 'cjs',
       },
       {
-        file: 'dist/index.umd.js',
+        file: 'lib/index.umd.js',
         format: 'umd',
         name: 'SUI',
       },
@@ -36,6 +39,14 @@ export default [
         include: path.join(__dirname, 'src'),
         extensions: ['.js', '.jsx', '.es', '.mjs', '.ts', '.tsx'],
       }),
+      postcss({
+        extract: 'css/index.css',
+        extensions: ['.css', '.scss', '.sass'],
+        minimize: true,
+        plugins: [
+          autoprefixer()
+        ]
+      })
     ],
   },
 ];

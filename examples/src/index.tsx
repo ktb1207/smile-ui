@@ -8,6 +8,6 @@ const root = document.getElementById('root') as HTMLDivElement;
 createRoot(root).render(
   <React.StrictMode>
     <h3>hello react</h3>
-    <Button theme='parimy'>smile button</Button>
+    <Button theme='warning'>smile button</Button>
   </React.StrictMode>
 )
